@@ -1,0 +1,194 @@
+body {
+
+margin: 0;
+
+font-family: 'Georgia', serif; /* Fonte que
+
+lembra escrita antiga */
+
+background-color: #e0d8c4; /* Um tom suave de bege para o fundo da página */
+
+color: #2c3e50; /* Cor de texto mais escura */
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+min-height: 100vh;
+
+background-image: url('pagina-livro.jpg'); /
+
+* Substitua por sua imagem */
+
+}
+
+background-size: cover;
+
+background-position: center;
+
+position: relative; /* Para o overlay */
+
+/* Overlay para dar um tom mais verde e suavizar a imagem de fundo */
+
+.body::before {
+
+content: ";
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 100%;
+
+background-color: rgba(50, 150, 50, 0.3); /*
+
+Tom de verde suave com transparência */
+
+}
+
+z-index: 1;
+
+.container {
+
+position: relative; /* Para garantir que o conteúdo fique acima do overlay */
+
+z-index: 2;
+
+text-align: center;
+
+padding: 20px;
+background-color: rgba(255, 255, 255, 0.8); /* Fundo levemente branco para o conteúdo */}
+
+border-radius: 10px;
+
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+max-width: 600px;
+
+width: 90%;
+
+.page-content {
+
+/* Pode adicionar mais estilo aqui se quiser que a div.page-content tenha um visual específico, como uma borda de página */}
+
+.text-container h1 {
+
+font-size: 2.5em;
+
+margin-bottom: 20px;
+
+color: #27ae60; /* Verde um pouco mais escuro para o título */
+
+} font-family: 'Playfair Display', serif; /* Outra fonte elegante */
+
+input[type="text"] {
+
+padding: 12px 15px;
+
+margin-bottom: 20px;
+
+border: 2px solid #27ae60; /* Borda verde */
+
+border-radius: 5px;
+
+font-size: 1.1em;
+
+width: calc(100% -30px); /* Ajusta a largura
+
+considerando o padding */
+
+box-sizing: border-box; /* Inclui padding e border na largura total */}
+
+button {
+padding: 12px 25px;
+
+background-color: #2ecc71; /* Verde mais
+
+vibrante para o botão */
+
+}
+
+color: white;
+
+border: none;
+
+border-radius: 5px;
+
+font-size: 1.1em;
+
+cursor: pointer;
+
+transition: background-color 0.3s ease;
+
+button:hover {
+
+background-color: #27ae60; /* Verde mais
+
+escuro no hover */
+
+}
+
+#message {
+
+margin-top: 20px;
+
+font-size: 1.2em;
+
+color: #e74c3c; /* Vermelho para erros/
+
+mensagens de falha */
+
+}
+
+font-weight: bold;
+
+/* Estilos para a imagem de fundo (pena, tinteiro, óculos) */
+
+/* Você precisará criar essa imagem ou encontrar uma que se encaixe */
+
+/* Por enquanto, vamos usar um placeholder visual no CSS */
+
+/* Para adicionar a imagem de fundo com a pena, tinteiro e óculos, você pode usar um elemento div específico ou inserir a imagem diretamente no HTML. Se for um elemento
+
+específico: */
+
+.page-background-elements {
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 100%;
+
+pointer-events: none; /* Permite clicar
+
+através desta camada */
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+.page-background-elements img {
+
+max-width: 100%;
+
+max-height: 100%;
+
+object-fit: contain; /* Garante que a imagem não seja distorcida */
+
+}
+
+/* Se você optar por não usar uma imagem separada para os elementos, pode tentar incorporar esses elementos com pseudo-elementos ou outras técnicas de CSS, mas uma imagem é geralmente mais fácil */
